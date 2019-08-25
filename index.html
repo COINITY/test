@@ -9,9 +9,14 @@
 <body>
     who am I? <br>
     where am I? <br>
-    
-    <audio controls>
+    <audio controls id="myaudio">
         <source src="secret-message.wav" type="audio/wav">
     </audio>
+<script>
+    var Audio = document.getElementById("myaudio");
+    if (Audio.hasAttribute("controls")) {
+        Audio.removeAttribute("controls")
+    }
+</script>
 </body>
 </html>
